@@ -8,6 +8,6 @@ RUN chmod +x /src/init.sh
 RUN chmod +x /src/pwrstat-api.py
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-COPY PPL-*-64bit.deb  powerpanel_*_amd64.deb PPL_64bit_*.deb
+COPY PPL-*-64bit.deb powerpanel_*_amd64.deb PPL_64bit_*.deb /src/
 RUN dpkg -i *.deb
 ENTRYPOINT "/src/init.sh"
